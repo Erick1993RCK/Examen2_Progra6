@@ -64,5 +64,10 @@
     <Build Include="dbo\Tables\Servicio.sql" />
     <Build Include="dbo\Tables\Cliente.sql" />
     <Build Include="dbo\Tables\Solicitud.sql" />
+    <Build Include="dbo\StoredProcedures\ClienteActualizar.sql" />
+    <Build Include="dbo\StoredProcedures\ClienteEliminar.sql" />
+    <Build Include="dbo\StoredProcedures\ClienteInsertar.sql" />
+    <Build Include="dbo\StoredProcedures\ClienteListar.sql" />
+    <Build Include="dbo\StoredProcedures\ClienteObtener.sql" />
   </ItemGroup>
 </Project>
