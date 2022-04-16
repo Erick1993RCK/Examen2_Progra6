@@ -60,7 +60,7 @@ AS
   )
 
   COMMIT TRANSACTION TRASA
-  SELECT 0 AS CodeError, 'El cliente no pudo ser agregado' AS MsgError
+  SELECT 0 AS CodeError, 'El cliente no pudo ser agregado a la BD' AS MsgError
 
   END TRY
 
