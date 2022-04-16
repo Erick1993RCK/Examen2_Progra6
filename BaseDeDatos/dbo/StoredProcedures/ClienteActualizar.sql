@@ -42,7 +42,7 @@ AS
 	WHERE IdCliente = @IdCliente
 
 	COMMIT TRANSACTION TRASA
-	SELECT 0 AS CodeError, 'El cliente no pudo ser actualizado' AS MsgError
+	SELECT 0 AS CodeError, 'El cliente no pudo ser actualizado en la BD' AS MsgError
 
 	END TRY
 

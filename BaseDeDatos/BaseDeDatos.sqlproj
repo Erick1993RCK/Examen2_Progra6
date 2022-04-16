@@ -69,5 +69,15 @@
     <Build Include="dbo\StoredProcedures\ClienteInsertar.sql" />
     <Build Include="dbo\StoredProcedures\ClienteListar.sql" />
     <Build Include="dbo\StoredProcedures\ClienteObtener.sql" />
+    <Build Include="dbo\StoredProcedures\ServicioActualizar.sql" />
+    <Build Include="dbo\StoredProcedures\ServicioEliminar.sql" />
+    <Build Include="dbo\StoredProcedures\ServicioInsertar.sql" />
+    <Build Include="dbo\StoredProcedures\ServicioLista.sql" />
+    <Build Include="dbo\StoredProcedures\ServicioObtener.sql" />
+    <Build Include="dbo\StoredProcedures\SolicitudActualizar.sql" />
+    <Build Include="dbo\StoredProcedures\SolicitudEliminar.sql" />
+    <Build Include="dbo\StoredProcedures\SolicitudInsertar.sql" />
+    <Build Include="dbo\StoredProcedures\SolicitudListar.sql" />
+    <Build Include="dbo\StoredProcedures\SolicitudObtener.sql" />
   </ItemGroup>
 </Project>

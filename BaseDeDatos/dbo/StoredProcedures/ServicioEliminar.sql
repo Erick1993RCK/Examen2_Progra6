@@ -1,18 +1,18 @@
-﻿CREATE PROCEDURE [dbo].[ClienteEliminar]
-	@IdCliente INT
+﻿CREATE PROCEDURE [dbo].[ServicioEliminar]
+	@IdServicio INT
 AS
-	BEGIN
+ BEGIN
   SET NOCOUNT ON
 
   BEGIN TRANSACTION TRASA
 
   BEGIN TRY
 
-   DELETE FROM dbo.Cliente
-   WHERE IdCliente = @IdCliente
+   DELETE FROM dbo.Servicio
+   WHERE IdServicio = @IdServicio
 
   COMMIT TRANSACTION TRASA
-  SELECT 0 AS CodeError, 'El cliente no pudo ser borrado de la BD' AS MsgError
+  SELECT 0 AS CodeError, 'No se pudo eliminar el servicio de la BD' AS MsgError
 
   END TRY
 
