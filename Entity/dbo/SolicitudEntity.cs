@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity.dbo
+namespace Entity
 {
-    class SolicitudEntity
+    public class SolicitudEntity: DBEntity
     {
         public int? IdSolicitud { get; set; }
         public int? IdCliente { get; set; }
