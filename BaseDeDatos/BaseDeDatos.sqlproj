@@ -72,7 +72,7 @@
     <Build Include="dbo\StoredProcedures\ServicioActualizar.sql" />
     <Build Include="dbo\StoredProcedures\ServicioEliminar.sql" />
     <Build Include="dbo\StoredProcedures\ServicioInsertar.sql" />
-    <Build Include="dbo\StoredProcedures\ServicioLista.sql" />
+    <Build Include="dbo\StoredProcedures\ServicioListar.sql" />
     <Build Include="dbo\StoredProcedures\ServicioObtener.sql" />
     <Build Include="dbo\StoredProcedures\SolicitudActualizar.sql" />
     <Build Include="dbo\StoredProcedures\SolicitudEliminar.sql" />
