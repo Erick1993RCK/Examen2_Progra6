@@ -34,7 +34,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.QueryAsync<ClienteEntity, ServicioEntity, SolicitudEntity>("dbo.ClienteObtener", "IdCliente,IdServicio,IdSolicitud");
+                var result = sql.QueryAsync<ClienteEntity>("dbo.ClienteObtener");
                 return await result;
             }
             catch (Exception)
@@ -68,7 +68,6 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("dbo.ClienteInsertar", new
                 {
-                    entity.IdCliente,
                     entity.Identificacion,
                     entity.IdTipoIdentificacion,
                     entity.Nombre,
@@ -76,7 +75,7 @@ namespace WBL
                     entity.SegundoApellido,
                     entity.FechaNacimiento,
                     entity.Nacionalidad,
-                    entity.FehaDefuncion,
+                    entity.FechaDefuncion,
                     entity.Genero,
                     entity.NombreApellidosPadre,
                     entity.NombreApellidosMadre,
@@ -109,7 +108,7 @@ namespace WBL
                     entity.SegundoApellido,
                     entity.FechaNacimiento,
                     entity.Nacionalidad,
-                    entity.FehaDefuncion,
+                    entity.FechaDefuncion,
                     entity.Genero,
                     entity.NombreApellidosPadre,
                     entity.NombreApellidosMadre,
@@ -162,5 +161,8 @@ namespace WBL
 
         }
         #endregion
+
+
+
     }
 }
