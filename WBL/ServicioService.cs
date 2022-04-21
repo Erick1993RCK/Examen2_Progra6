@@ -136,7 +136,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.QueryAsync<ServicioEntity>("dbo.ServoicioLista");
+                var result = sql.QueryAsync<ServicioEntity>("dbo.ServoicioListar");
                 return await result;
             }
             catch (Exception)
