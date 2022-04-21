@@ -68,6 +68,7 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("dbo.ClienteInsertar", new
                 {
+                    entity.IdCliente,
                     entity.Identificacion,
                     entity.IdTipoIdentificacion,
                     entity.Nombre,
