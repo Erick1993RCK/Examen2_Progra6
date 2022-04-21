@@ -16,7 +16,7 @@ namespace Entity
         public string SegundoApellido { get; set; }
         public DateTime FechaNacimiento { get; set; } = DateTime.Now;
         public int? Nacionalidad { get; set; }
-        public DateTime FehaDefuncion { get; set; } = DateTime.Now;
+        public DateTime FechaDefuncion { get; set; } = DateTime.Now;
         public string Genero { get; set; }
         public string NombreApellidosPadre { get; set; }
         public string NombreApellidosMadre { get; set; }

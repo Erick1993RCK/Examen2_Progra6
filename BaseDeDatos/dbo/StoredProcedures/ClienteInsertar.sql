@@ -42,7 +42,7 @@ AS
   )
   VALUES
   (
-    @IdCliente,
+
 	@Identificacion,
 	@IdTipoIdentificacion,
 	@Nombre,
