@@ -1,0 +1,79 @@
+﻿@page
+@model WebApp.Pages.Cliente.GridModel
+@{
+}
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            Clientes
+        </div>
+        <div class="card-body">
+
+
+            <a class="btn btn-secondary" asp-page="Edit"><i class='bx bxs-add-to-queue'></i></a>
+
+            <div class="row">
+                <div class="col-12">
+                    <table id="GridView" class="table table-bordered table table-striped table table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Identificación</th>
+                                <th>Tipo Identificacion</th>
+                                <th>Nombre</th>
+                                <th>Primer Apellido</th>
+                                <th>Segundo Apellido</th>
+                                <th>Fecha Nacimiento</th>
+                                <th>Nacionalidad</th>
+                                <th>Feha De defuncion</th>
+                                <th>Genero</th>
+                                <th>Nombre Apellidos Padre</th>
+                                <th>Nombre Apellidos Madre</th>
+                                <th>Pasaporte</th>
+                                <th>Cuenta IBAN</th>
+                                <th>Correo Notifica</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         @foreach (var item in Model.GridList)
+                                    {
+                        <tr>
+                            <td>@item.IdCliente</td>
+                            <td>@item.Identificacion</td>
+                            <td>@item.Nombre</td>
+                            <td>@item.PrimerApellido</td>
+                            <td>@item.SegundoApellido</td>
+                            <td>@item.FechaNacimiento</td>
+                            <td>@item.Nacionalidad</td>
+                            <td>@item.FechaDefuncion</td>
+                            <td>@item.Genero</td>
+                            <td>@item.NombreApellidosPadre</td>
+                            <td>@item.NombreApellidosMadre</td>
+                            <td>@item.Pasaporte</td>
+                            <td>@item.CuentaIBAN</td> 
+                            <td>@item.CorreoNotifica</td>       
+
+                            <td>
+                        <a class="btn btn-secondary" asp-page="Edit" asp-route-id="@item.IdCliente"><i class='bx bx-edit'></i></a>
+                        <button type="button" class="btn btn-secondary" onclick="ClienteGrid.OnClickEliminar(@item.IdCliente)"><i class='bx bx-trash'></i></button>
+                    </td>
+                </tr>}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    .
+</div>
+
+@section Scripts{
+
+    <script>
+        var MensajeApp = "@Html.Raw(Model.Mensaje)";
+    </script>
+
+    <script defer src="~/App/Cliente/Grid.js"></script>
+
+}

@@ -6,11 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.6" />
+    <Content Remove="wwwroot\App\Cliente\Edit.ts" />
+    <Content Remove="wwwroot\App\Cliente\Grid.ts" />
+    <Content Remove="wwwroot\App\Servicio\Edit.ts" />
+    <Content Remove="wwwroot\App\Servicio\Grid.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\App\" />
+    <PackageReference Include="Dapper.Mapper" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.6" />
   </ItemGroup>
 
   <ItemGroup>
@@ -71,6 +75,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\App\Cliente\Edit.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Cliente\Grid.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Servicio\Edit.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Servicio\Grid.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\Apexchart\index.d.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\axios\index.d.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\bootstrap-validator\bvenums.ts" />

@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WBL;
+using BD;
 
 namespace WebApp
 {
@@ -11,6 +13,9 @@ namespace WebApp
 
         public static IServiceCollection AddDIContainer(this IServiceCollection services)
         {
+            services.AddSingleton<IDataAccess, DataAccess>();
+            services.AddTransient<IClienteService, ClienteService>();
+            services.AddTransient<IServicioService, ServicioService>();
 
 
             return services;
