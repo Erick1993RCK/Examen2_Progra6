@@ -2,3 +2,67 @@
 @model WebApp.Pages.Solicitud.GridModel
 @{
 }
+
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            Solicitud
+        </div>
+        <div class="card-body">
+
+
+            <a class="btn btn-secondary" asp-page="Edit"><i class='bx bxs-add-to-queue'></i></a>
+
+            <div class="row">
+                <div class="col-12">
+                    <table id="GridView" class="table table-bordered table table-striped table table-hover">
+                        <thead>
+                            <tr>
+                                <th>IdSolicitud</th>
+                                <th>IdCliente</th>
+                                <th>IdServicio</th>
+                                <th>Cantidad</th>
+                                <th>Monto</th>
+                                <th>FechaEntrega</th>
+                                <th>UsuarioEntrega</th>
+                                <th>Observaciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.GridList)
+                            {
+                                <tr>
+                                    <td>@item.IdSolicitud</td>
+                                    <td>@item.IdCliente</td>
+                                    <td>@item.IdServicio</td>
+                                    <td>@item.Cantidad</td>
+                                    <td>@item.Monto</td>
+                                    <td>@item.FechaEntrega</td>
+                                    <td>@item.UsuarioEntrega</td>
+                                    <td>@item.Observaciones</td>
+                                   
+                                    <td>
+                                        <a class="btn btn-secondary" asp-page="Edit" asp-route-id="@item.IdSolicitud"><i class='bx bx-edit'></i></a>
+                                        <button type="button" class="btn btn-secondary" onclick="ClienteGrid.OnClickEliminar(@item.IdSolicitud)"><i class='bx bx-trash'></i></button>
+                                    </td>
+                                </tr>
+}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    .
+</div>
+
+@section Scripts{
+
+    <script>
+        var MensajeApp = "@Html.Raw(Model.Mensaje)";
+    </script>
+
+    <script defer src="~/App/Solictud/Grid.js"></script>
+
+}
