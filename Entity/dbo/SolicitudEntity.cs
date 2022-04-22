@@ -11,7 +11,7 @@ namespace Entity
         public int? IdSolicitud { get; set; }
         public int? IdCliente { get; set; }
         public int? IdServicio { get; set; }
-        public int? IdCantidad { get; set; }
+        public int? Cantidad { get; set; }
         public decimal Monto { get; set; }
         public DateTime FechaEntrega { get; set; }
         public string UsuarioEntrega { get; set; }
