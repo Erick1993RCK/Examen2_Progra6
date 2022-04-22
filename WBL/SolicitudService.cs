@@ -34,7 +34,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.QueryAsync<SolicitudEntity, ServicioEntity, ClienteEntity>("dbo.SolicitudObtener", "IdSolicitud,IdServicio,IdCliente");
+                var result = sql.QueryAsync<SolicitudEntity>("dbo.SolicitudObtener", "IdSolicitud,IdServicio,IdCliente");
                 return await result;
             }
             catch (Exception)
